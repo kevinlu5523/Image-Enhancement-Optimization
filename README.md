@@ -49,22 +49,6 @@ $$y = \left( \frac{\log(1 + a \cdot x^b)}{\log(1 + a)} \right)$$
 
 ---
 
-## 資料集
-
-本專案於演算法評估與多場景測試中，共採用了以下兩個公開資料集：
-
-1. **DarkFace 資料集**
-   * **說明**：包含大量適用於真實夜間與極暗場景之影像。
-   * **連結**：https://www.kaggle.com/datasets/soumikrakshit/dark-face-dataset
-
-2. **DICM 資料集**
-   * **說明**：包含 69 張由數位相機拍攝的真實生活低光源影像。
-   * **連結**：https://github.com/baidut/BIMEF
-
-> ⚠️ **重要說明**：由於智慧財產權限制，本倉庫未包含上述影像資料集。請點擊上方連結自行下載。
-
----
-
 ## MPA演算法參數設定
 
 *   **族群大小 (nPop)**：30
@@ -130,6 +114,22 @@ Image-Enhancement-Optimization/
 
 ---
 
+## 資料集
+
+本專案於演算法評估與多場景測試中，共採用了以下兩個公開資料集：
+
+1. **DarkFace 資料集**
+   * **說明**：包含大量適用於真實夜間與極暗場景之影像。
+   * **連結**：https://www.kaggle.com/datasets/soumikrakshit/dark-face-dataset
+
+2. **DICM 資料集**
+   * **說明**：包含 69 張由數位相機拍攝的真實生活低光源影像。
+   * **連結**：https://github.com/baidut/BIMEF
+
+> ⚠️ **重要說明**：由於智慧財產權限制，本倉庫未包含上述影像資料集。請點擊上方連結自行下載。
+
+---
+
 ## 安裝指南
 
 ### 1. 環境需求
@@ -142,18 +142,18 @@ Image-Enhancement-Optimization/
 
 ---
 
-### 2. 專案檔案結構 (Repository Structure)
+### 2. 專案檔案結構
 請確保 Clone 或下載本專案後，以下 5 個核心執行檔案完整存在於同一個工作資料夾下，主程式與 App 即可正常驅動（其餘 MPA.m、GWO.m、HHO.m 為初期實驗對比腳本，不影響 App 執行）：
 
 * `ImageEnhancerApp.mlapp` —— 系統核心圖形化操作介面
-* `calculate_brightness.m` —— 模組 1：平均亮度計算功能
-* `run_mpa_optimization.m` —— 模組 2：MPA 演算法核心迭代與優化函式
-* `analyze_improvement.m`  —— 模組 3：後置 8x8 網格影像改善分析工具
+* `calculate_brightness.m` —— 平均亮度計算功能
+* `run_mpa_optimization.m` —— MPA 演算法核心迭代與優化函式
+* `analyze_improvement.m`  —— 後置 8x8 網格影像改善分析工具
 * `PCQI.m`                 —— 外部指標：官方客觀對比品質指標評分演算法
 
 ---
 
-### 3. 專案執行三步驟 (Execution Steps)
+### 3. 專案執行三步驟
 
 #### 步驟一：路徑正確性確認
 打開 MATLAB 軟體後，請先看左側的「檔案瀏覽器 (Current Folder)」，**將工作目錄徹底切換至包含上述 5 個檔案的資料夾路徑**。
